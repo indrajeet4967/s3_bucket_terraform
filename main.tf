@@ -74,6 +74,12 @@ resource "aws_security_group" "my_secuirty_group" {
     protocol    = "tcp"
     cidr_blocks = ["10.10.0.0/25"]
   }
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["10.10.0.0/25"]
+  }
 
   egress {
     from_port   = 0
